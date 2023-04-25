@@ -1,5 +1,4 @@
-﻿
-// Define the namespace for the project
+﻿// Define the namespace for the project
 using ST10102524_Kgaphola_Emmanuel;
 
 namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
@@ -11,13 +10,14 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-
+            // Display a welcome message
             Console.WriteLine("========== Welcome to the Recipe Book ==========!");
             Console.ResetColor();
-           
 
+            // Create a new Recipe object
             Recipe recipe = new Recipe();
 
+            // Start a loop that will continue until the user chooses to exit
             while (true)
             {
                 // Display the menu.
@@ -40,32 +40,36 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 {
 
                     case "1":
+                        // If the user entered 1, enter the details for a single recipe.
                         recipe.EnterRecipeDetails();
                         break;
                     case "2":
+                        // If the user entered 2, it will display the full recipe.
                         recipe.DisplayRecipe();
                         break;
                     case "3":
+                        // If the user entered 3, it will scale the recipe by a factor of 0.5, 2, or 3.
                         recipe.ScaleRecipe();
                         break;
                     case "4":
+                        // If the user entered 4,it reset the quantities to their original values.
                         recipe.ResetQuantities();
                         break;
                     case "5":
+                        // If the user entered 5, it will clear all the data and enter a new recipe.
                         recipe = new Recipe();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("\nAll data for this recipe have been successfully cleared.\n");
                         Console.ResetColor();
                         break;
                     case "6":
-                        return; // Exit the program
+                        return;  // If the user entered 6,  program will exit.
                     default:
                         Console.WriteLine("Invalid option");
                         break;
                 }
 
-
-                }
+            }
         }
     }
 }
