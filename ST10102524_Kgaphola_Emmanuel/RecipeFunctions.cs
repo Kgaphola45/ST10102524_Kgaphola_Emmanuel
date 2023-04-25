@@ -83,6 +83,27 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        
+        private void EnterSteps()
+        {
+            Console.Write("How many steps are required for this recipe: ");
+            if (int.TryParse(Console.ReadLine(), out int numSteps))
+            {
+                for (int i = 0; i < numSteps; i++)
+                {
+                    Console.WriteLine($"Enter step number {i + 1}:");
+                    string step = Console.ReadLine();
+                    steps.Add(step);
+                }
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nInvalid input. Please enter a valid number.\n");
+                Console.ResetColor();
+            }
+        }
+
 
 
     }
