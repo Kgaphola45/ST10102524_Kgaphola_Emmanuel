@@ -129,6 +129,30 @@ namespace ST10102524_Kgaphola_Emmanuel
             Console.WriteLine();
         }
 
+       
+        public void ScaleRecipe()
+        {
+            Console.Write("Enter the scaling factor (e.g. 0.5 for half, 2 for double, 3 for triple): ");
+            double factor = double.Parse(Console.ReadLine());
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Are you sure you want to scale the recipe by a factor of {factor}? (Y/N)");
+            Console.ResetColor();
+            string confirm = Console.ReadLine();
+
+            if (confirm.ToLower() == "y")
+            {
+                foreach (Ingredient ingredient in ingredients)
+                {
+                    ingredient.Quantity *= factor;
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"\nRecipe scaled successfully to factor of {factor}!");
+                Console.ResetColor();
+                Console.WriteLine();
+            }
+        }
+
 
 
     }
