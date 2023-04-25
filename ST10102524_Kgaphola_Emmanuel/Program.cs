@@ -1,5 +1,7 @@
 ﻿
 // Define the namespace for the project
+using ST10102524_Kgaphola_Emmanuel;
+
 namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
 {
     // Define the main program class
@@ -36,26 +38,29 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
 
                 switch (input)
                 {
+
                     case "1":
-                        Console.WriteLine("");
+                        recipe.EnterRecipeDetails();
                         break;
                     case "2":
-                        
+                        recipe.DisplayRecipe();
                         break;
                     case "3":
-                        
+                        recipe.ScaleRecipe();
                         break;
                     case "4":
-                        
+                        recipe.ResetQuantities();
                         break;
                     case "5":
-                        
+                        recipe = new Recipe();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nAll data for this recipe have been successfully cleared.\n");
+                        Console.ResetColor();
                         break;
                     case "6":
-                        
-                        break;
+                        return; // Exit the program
                     default:
-                        
+                        Console.WriteLine("Invalid option");
                         break;
                 }
 
