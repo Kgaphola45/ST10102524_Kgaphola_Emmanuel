@@ -104,6 +104,31 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+       
+        public void DisplayRecipe()
+        {
+            Console.WriteLine("\nFull Recipe:\n");
+
+            string ingredientsList = "";
+
+            foreach (Ingredient ingredient in ingredients)
+            {
+                ingredientsList += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name}, ";
+            }
+
+            ingredientsList = ingredientsList.TrimEnd(',', ' ');
+
+            Console.WriteLine($"For this recipe, you will need {ingredientsList}.\n");
+
+            Console.WriteLine("Steps required to prepare this recipe:");
+
+            for (int i = 0; i < steps.Count; i++)
+            {
+                Console.WriteLine($"Step number {i + 1}. {steps[i]}.");
+            }
+            Console.WriteLine();
+        }
+
 
 
     }
