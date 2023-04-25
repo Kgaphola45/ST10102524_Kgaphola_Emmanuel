@@ -23,7 +23,19 @@ namespace ST10102524_Kgaphola_Emmanuel
             originalQuantity = quantity;
         }
 
+        public void ResetQuantity()
+        {
+            Quantity = originalQuantity;
+        }
 
+    }
+
+
+
+    class Recipe
+    {
+        private List<Ingredient> ingredients;
+        private List<string> steps;
 
 
     }
