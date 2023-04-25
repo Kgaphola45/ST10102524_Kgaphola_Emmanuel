@@ -153,6 +153,29 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        
+        public void ResetQuantities()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+            Console.WriteLine("Are you sure you want to reset the quantities of all ingredients in the recipe to their original values? (Y/N)");
+            Console.ResetColor();
+            string confirm = Console.ReadLine();
+
+            if (confirm.ToLower() == "y")
+            {
+                foreach (Ingredient ingredient in ingredients)
+                {
+                    ingredient.ResetQuantity();
+                }
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nQuantity data for this recipe has been reset.");
+                Console.ResetColor();
+                Console.WriteLine();
+            }
+        }
+
 
 
     }
