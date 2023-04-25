@@ -32,8 +32,35 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 Console.WriteLine("_______________________________________________");
                 Console.ResetColor();
 
+                string input = Console.ReadLine();
 
-            }
+                switch (input)
+                {
+                    case "1":
+                        Console.WriteLine("");
+                        break;
+                    case "2":
+                        
+                        break;
+                    case "3":
+                        
+                        break;
+                    case "4":
+                        
+                        break;
+                    case "5":
+                        
+                        break;
+                    case "6":
+                        
+                        break;
+                    default:
+                        
+                        break;
+                }
+
+
+                }
         }
     }
 }
