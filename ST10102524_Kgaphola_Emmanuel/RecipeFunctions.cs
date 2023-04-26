@@ -28,7 +28,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             originalQuantity = quantity;
         }
 
-        // Method to reset the quantity of Ingredient to its original value
+        // Method to reset the quantity of Ingredient to its original  value
         public void ResetQuantity()
         {
             Quantity = originalQuantity;
