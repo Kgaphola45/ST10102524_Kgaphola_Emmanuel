@@ -22,18 +22,18 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             {
                 // Display the menu.
                 Console.ForegroundColor = ConsoleColor.Cyan;
-
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("_______________________________________________");
-                Console.WriteLine("Press '1' to enter the details for a single recipe.");
-                Console.WriteLine("Press '2' to display the full recipe.");
-                Console.WriteLine("Press '3' to scale by a factor of 0.5 (half), 2 (double) or 3 (triple).");
-                Console.WriteLine("Press '4' to reset quantities to the original values.");
-                Console.WriteLine("Press '5' to clear all the data to enter a new recipe.");
-                Console.WriteLine("Press '6' to exit.");
+                Console.WriteLine("Press '1' to enter the details for a new recipe.");
+                Console.WriteLine("Press '2' to display all recipes.");
+                Console.WriteLine("Press '3' to choose a recipe to display.");
+                Console.WriteLine("Press '4' to scale a recipe.");
+                Console.WriteLine("Press '5' to reset quantities in a recipe.");
+                Console.WriteLine("Press '6' to calculate the total calories in a recipe.");
+                Console.WriteLine("Press '7' to clear all data to enter a new recipe.");
+                Console.WriteLine("Press '8' to exit.");
                 Console.WriteLine("_______________________________________________");
                 Console.ResetColor();
-
                 string input = Console.ReadLine();
 
                 switch (input)
