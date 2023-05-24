@@ -184,6 +184,18 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        public int CalculateTotalCalories()
+        {
+            int totalCalories = 0;
+
+            foreach (Ingredient ingredient in ingredients)
+            {
+                totalCalories += ingredient.Calories;
+            }
+
+            return totalCalories;
+        }
+
 
     }
 
