@@ -14,8 +14,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             Console.WriteLine("========== Welcome to the Recipe Book ==========!");
             Console.ResetColor();
 
-            // Create a new Recipe object
-            Recipe recipe = new Recipe();
+              List<Recipe> recipes = new List<Recipe>();
 
             // Start a loop that will continue until the user chooses to exit
             while (true)
@@ -38,37 +37,187 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
 
                 switch (input)
                 {
-
                     case "1":
-                        // If the user entered 1, enter the details for a single recipe.
-                        recipe.EnterRecipeDetails();
+                        Recipe recipe = EnterNewRecipe();
+                        recipes.Add(recipe);
                         break;
                     case "2":
-                        // If the user entered 2, it will display the full recipe.
-                        recipe.DisplayRecipe();
+                        DisplayAllRecipes(recipes);
                         break;
                     case "3":
-                        // If the user entered 3, it will scale the recipe by a factor of 0.5, 2, or 3.
-                        recipe.ScaleRecipe();
+                        DisplaySingleRecipe(recipes);
                         break;
                     case "4":
-                        // If the user entered 4,it reset the quantities to their original values.
-                        recipe.ResetQuantities();
+                        ScaleRecipe(recipes);
                         break;
                     case "5":
-                        // If the user entered 5, it will clear all the data and enter a new recipe.
-                        recipe = new Recipe();
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("\nAll data for this recipe have been successfully cleared.\n");
-                        Console.ResetColor();
+                        ResetQuantities(recipes);
                         break;
                     case "6":
-                        return;  // If the user entered 6,  program will exit.
+                        CalculateTotalCalories(recipes);
+                        break;
+                    case "7":
+                        recipes.Clear();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nAll recipe data has been cleared.\n");
+                        Console.ResetColor();
+                        break;
+                    case "8":
+                        return;
                     default:
                         Console.WriteLine("Invalid option");
                         break;
                 }
+            }
+        }
 
+        static Recipe EnterNewRecipe()
+        {
+            Console.Write("Enter the name of the recipe: ");
+            string recipeName = Console.ReadLine();
+            Recipe recipe = new Recipe(recipeName);
+            recipe.EnterRecipeDetails();
+            return recipe;
+        }
+
+        static void DisplayAllRecipes(List<Recipe> recipes)
+        {
+            if (recipes.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNo recipes found.\n");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.WriteLine("\nList of Recipes:");
+                List<Recipe> sortedRecipes = recipes.OrderBy(r => r.Name).ToList();
+                foreach (Recipe recipe in sortedRecipes)
+                {
+                    Console.WriteLine(recipe.Name);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void DisplaySingleRecipe(List<Recipe> recipes)
+        {
+            if (recipes.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNo recipes found.\n");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.Write("Enter the name of the recipe: ");
+                string recipeName = Console.ReadLine();
+
+                Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
+
+                if (recipe == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nRecipe not found.\n");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    recipe.DisplayRecipe();
+                }
+            }
+        }
+
+        static void ScaleRecipe(List<Recipe> recipes)
+        {
+            if (recipes.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNo recipes found.\n");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.Write("Enter the name of the recipe: ");
+                string recipeName = Console.ReadLine();
+
+                Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
+
+                if (recipe == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nRecipe not found.\n");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    recipe.ScaleRecipe();
+                }
+            }
+        }
+
+        static void ResetQuantities(List<Recipe> recipes)
+        {
+            if (recipes.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNo recipes found.\n");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.Write("Enter the name of the recipe: ");
+                string recipeName = Console.ReadLine();
+
+                Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
+
+                if (recipe == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nRecipe not found.\n");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    recipe.ResetQuantities();
+                }
+            }
+        }
+
+        static void CalculateTotalCalories(List<Recipe> recipes)
+        {
+            if (recipes.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNo recipes found.\n");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.Write("Enter the name of the recipe: ");
+                string recipeName = Console.ReadLine();
+
+                Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
+
+                if (recipe == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nRecipe not found.\n");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    int totalCalories = recipe.CalculateTotalCalories();
+
+                    Console.WriteLine($"\nTotal calories in the recipe '{recipe.Name}': {totalCalories} calories\n");
+
+                    if (totalCalories > 300)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("The total calories of this recipe exceed 300.");
+                        Console.ResetColor();
+                    }
+                }
             }
         }
     }
