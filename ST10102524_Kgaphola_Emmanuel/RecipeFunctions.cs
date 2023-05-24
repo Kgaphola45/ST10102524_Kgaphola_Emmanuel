@@ -8,32 +8,28 @@ using System.Threading.Tasks;
 // Defining namespace for the program
 namespace ST10102524_Kgaphola_Emmanuel
 {
-    
+
     class Ingredient
     {
-        // Declaring public properties for Ingredient object
         public string Name { get; set; }
         public double Quantity { get; set; }
         public string Unit { get; set; }
+        public int Calories { get; set; }
+        public string FoodGroup { get; set; }
 
-        // Private field to store original quantity
-        private double originalQuantity;
-
-        // Constructor to initialize Ingredient object with name, quantity, and unit
-        public Ingredient(string name, double quantity, string unit)
+        public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
         {
             Name = name;
             Quantity = quantity;
             Unit = unit;
-            originalQuantity = quantity;
+            Calories = calories;
+            FoodGroup = foodGroup;
         }
 
-        // Method to reset the quantity of Ingredient to its original  value
         public void ResetQuantity()
         {
-            Quantity = originalQuantity;
+            Quantity = 0;
         }
-
     }
 
     // Defining Recipe class
