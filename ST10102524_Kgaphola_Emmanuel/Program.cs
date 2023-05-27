@@ -242,4 +242,31 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
         }
     }
+    // Defining Ingredient class
+    class Ingredient
+    {
+        public string Name { get; set; }
+        public double Quantity { get; set; }
+        public string Unit { get; set; }
+        public int Calories { get; set; }
+        public string FoodGroup { get; set; }
+
+        // Constructor for Ingredient class
+        public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
+        {
+            Name = name;
+            Quantity = quantity;
+            Unit = unit;
+            Calories = calories;
+            FoodGroup = foodGroup;
+        }
+
+        // Method to reset the quantity of an ingredient to zero
+        public void ResetQuantity()
+        {
+            Quantity = 0;
+        }
+    }
+
+    
 }

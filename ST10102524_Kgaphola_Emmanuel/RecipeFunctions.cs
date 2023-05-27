@@ -127,7 +127,7 @@ namespace ST10102524_Kgaphola_Emmanuel
 
             foreach (Ingredient ingredient in ingredients)
             {
-                ingredientsList += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name}, ";
+                ingredientsList += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name} ({ingredient.Calories} calories), ";
             }
 
             ingredientsList = ingredientsList.TrimEnd(',', ' ');
@@ -143,6 +143,7 @@ namespace ST10102524_Kgaphola_Emmanuel
 
             Console.WriteLine();
         }
+
 
         // Method to scale the recipe by a given factor
         public void ScaleRecipe()
