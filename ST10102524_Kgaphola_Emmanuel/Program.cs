@@ -10,11 +10,12 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            // Display a welcome message
+            /* Display a welcome message */
             Console.WriteLine("========== Welcome to the Recipe Book ==========!");
             Console.ResetColor();
 
-              List<Recipe> recipes = new List<Recipe>();
+            // Create a list to store recipes
+            List<Recipe> recipes = new List<Recipe>();
 
             // Start a loop that will continue until the user chooses to exit
             while (true)
@@ -38,31 +39,39 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 switch (input)
                 {
                     case "1":
+                        // Option 1: Enter the details for a new recipe
                         Recipe recipe = EnterNewRecipe();
                         recipes.Add(recipe);
                         break;
                     case "2":
+                        // Option 2: Display all recipes
                         DisplayAllRecipes(recipes);
                         break;
                     case "3":
+                        // Option 3: Choose a recipe to display
                         DisplaySingleRecipe(recipes);
                         break;
                     case "4":
+                        // Option 4: Scale a recipe
                         ScaleRecipe(recipes);
                         break;
                     case "5":
+                        // Option 5: Reset quantities in a recipe
                         ResetQuantities(recipes);
                         break;
                     case "6":
+                        // Option 6: Calculate the total calories in a recipe
                         CalculateTotalCalories(recipes);
                         break;
                     case "7":
+                        // Option 7: Clear all data to enter a new recipe
                         recipes.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("\nAll recipe data has been cleared.\n");
                         Console.ResetColor();
                         break;
                     case "8":
+                        // Option 8: Exit the program
                         return;
                     default:
                         Console.WriteLine("Invalid option");
@@ -71,6 +80,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
         }
 
+        /* Method to enter details for a new recipe */
         static Recipe EnterNewRecipe()
         {
             Console.Write("Enter the name of the recipe: ");
@@ -80,6 +90,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             return recipe;
         }
 
+        /* Method to display all recipes */
         static void DisplayAllRecipes(List<Recipe> recipes)
         {
             if (recipes.Count == 0)
@@ -91,6 +102,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             else
             {
                 Console.WriteLine("\nList of Recipes:");
+                // Sort the recipes by name
                 List<Recipe> sortedRecipes = recipes.OrderBy(r => r.Name).ToList();
                 foreach (Recipe recipe in sortedRecipes)
                 {
@@ -100,6 +112,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
         }
 
+        /* Method to display a single recipe */
         static void DisplaySingleRecipe(List<Recipe> recipes)
         {
             if (recipes.Count == 0)
@@ -113,6 +126,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 Console.Write("Enter the name of the recipe: ");
                 string recipeName = Console.ReadLine();
 
+                // Find the recipe in the list by name
                 Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
 
                 if (recipe == null)
@@ -128,6 +142,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
         }
 
+        /* Method to scale a recipe */
         static void ScaleRecipe(List<Recipe> recipes)
         {
             if (recipes.Count == 0)
@@ -141,6 +156,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 Console.Write("Enter the name of the recipe: ");
                 string recipeName = Console.ReadLine();
 
+                // Find the recipe in the list by name
                 Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
 
                 if (recipe == null)
@@ -156,6 +172,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
         }
 
+        /* Method to reset quantities in a recipe */
         static void ResetQuantities(List<Recipe> recipes)
         {
             if (recipes.Count == 0)
@@ -169,6 +186,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 Console.Write("Enter the name of the recipe: ");
                 string recipeName = Console.ReadLine();
 
+                // Find the recipe in the list by name
                 Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
 
                 if (recipe == null)
@@ -184,6 +202,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
         }
 
+        /* Method to calculate the total calories in a recipe */
         static void CalculateTotalCalories(List<Recipe> recipes)
         {
             if (recipes.Count == 0)
@@ -197,6 +216,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 Console.Write("Enter the name of the recipe: ");
                 string recipeName = Console.ReadLine();
 
+                // Find the recipe in the list by name
                 Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
 
                 if (recipe == null)
@@ -207,6 +227,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 }
                 else
                 {
+                    // Calculate the total calories in the recipe
                     int totalCalories = recipe.CalculateTotalCalories();
 
                     Console.WriteLine($"\nTotal calories in the recipe '{recipe.Name}': {totalCalories} calories\n");
