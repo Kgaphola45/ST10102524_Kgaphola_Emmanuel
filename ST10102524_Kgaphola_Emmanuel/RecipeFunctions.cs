@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Defining namespace for the program
+
 namespace ST10102524_Kgaphola_Emmanuel
 {
-
+    // Defining Ingredient class
     class Ingredient
     {
         public string Name { get; set; }
@@ -17,6 +17,7 @@ namespace ST10102524_Kgaphola_Emmanuel
         public int Calories { get; set; }
         public string FoodGroup { get; set; }
 
+        // Constructor for Ingredient class
         public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
         {
             Name = name;
@@ -26,6 +27,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             FoodGroup = foodGroup;
         }
 
+        // Method to reset the quantity of an ingredient to zero
         public void ResetQuantity()
         {
             Quantity = 0;
@@ -39,6 +41,7 @@ namespace ST10102524_Kgaphola_Emmanuel
         private List<Ingredient> ingredients;
         private List<string> steps;
 
+        // Constructor for Recipe class
         public Recipe(string name)
         {
             Name = name;
@@ -46,6 +49,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             steps = new List<string>();
         }
 
+        // Method to enter recipe details
         public void EnterRecipeDetails()
         {
             EnterIngredients();
@@ -55,6 +59,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             Console.ResetColor();
         }
 
+        // Method to enter ingredients for the recipe
         private void EnterIngredients()
         {
             Console.Write("How many ingredients are in your recipe: ");
@@ -92,6 +97,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        // Method to enter steps for the recipe
         private void EnterSteps()
         {
             Console.Write("How many steps are required for this recipe: ");
@@ -112,6 +118,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        // Method to display the recipe details
         public void DisplayRecipe()
         {
             Console.WriteLine($"\nRecipe Name: {Name}\n");
@@ -137,6 +144,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             Console.WriteLine();
         }
 
+        // Method to scale the recipe by a given factor
         public void ScaleRecipe()
         {
             Console.Write("Enter the scaling factor (e.g., 0.5 for half, 2 for double, 3 for triple): ");
@@ -161,6 +169,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        // Method to reset the quantities of all ingredients in the recipe
         public void ResetQuantities()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -183,6 +192,7 @@ namespace ST10102524_Kgaphola_Emmanuel
             }
         }
 
+        // Method to calculate the total calories in the recipe
         public int CalculateTotalCalories()
         {
             int totalCalories = 0;
@@ -194,9 +204,5 @@ namespace ST10102524_Kgaphola_Emmanuel
 
             return totalCalories;
         }
-
-
     }
-
-
 }
