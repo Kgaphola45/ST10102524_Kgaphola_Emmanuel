@@ -48,7 +48,6 @@ namespace ST10102524_Kgaphola_Emmanuel
 
         public void EnterRecipeDetails()
         {
-            Console.WriteLine("Enter the details for the recipe:");
             EnterIngredients();
             EnterSteps();
             Console.ForegroundColor = ConsoleColor.Green;
