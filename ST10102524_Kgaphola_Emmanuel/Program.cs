@@ -123,24 +123,37 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
             }
             else
             {
-                Console.Write("Enter the name of the recipe: ");
-                string recipeName = Console.ReadLine();
-
-                // Find the recipe in the list by name
-                Recipe recipe = recipes.FirstOrDefault(r => r.Name.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
-
-                if (recipe == null)
+                Console.WriteLine("Choose a recipe to display:");
+                for (int i = 0; i < recipes.Count; i++)
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\nRecipe not found.\n");
-                    Console.ResetColor();
+                    Console.WriteLine($"{i + 1}. {recipes[i].Name}");
+                }
+                Console.WriteLine();
+                Console.Write("Enter the number of the recipe: ");
+                if (int.TryParse(Console.ReadLine(), out int recipeNumber))
+                {
+                    // Check if the recipe number is within the valid range
+                    if (recipeNumber >= 1 && recipeNumber <= recipes.Count)
+                    {
+                        Recipe recipe = recipes[recipeNumber - 1];
+                        recipe.DisplayRecipe();
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("\nInvalid recipe number.\n");
+                        Console.ResetColor();
+                    }
                 }
                 else
                 {
-                    recipe.DisplayRecipe();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nInvalid input. Please enter a valid number.\n");
+                    Console.ResetColor();
                 }
             }
         }
+
 
         /* Method to scale a recipe */
         static void ScaleRecipe(List<Recipe> recipes)
