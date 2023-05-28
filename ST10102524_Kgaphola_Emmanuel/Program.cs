@@ -267,7 +267,21 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                         // Calculate the total calories in the recipe
                         int totalCalories = recipe.CalculateTotalCalories();
 
-                        Console.WriteLine($"\nTotal calories in {recipe.Name}: {totalCalories} calories\n");
+                        Console.WriteLine($"\nTotal calories in {recipe.Name}: {totalCalories} calories");
+
+                        // Notify the user if the total calories exceed 300
+                        if (totalCalories > 300)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Warning: The total calories exceed 300!");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.WriteLine("The total calories are within the recommended range.");
+                        }
+
+                        Console.WriteLine();
                     }
                     else
                     {
@@ -284,6 +298,7 @@ namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
                 }
             }
         }
+
     }
     // Defining Ingredient class
     class Ingredient
