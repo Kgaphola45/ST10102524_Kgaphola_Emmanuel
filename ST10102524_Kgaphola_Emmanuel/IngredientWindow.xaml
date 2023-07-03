@@ -1,0 +1,48 @@
+﻿<Window x:Class="RecipeManagementApp.IngredientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Ingredient" Width="401" Height="642">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Style="{StaticResource TitleLabelStyle}">Name:</Label>
+            <TextBox x:Name="txtName" Text="{Binding Ingredient.Name, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TextBoxStyle}" />
+
+            <Label Style="{StaticResource TitleLabelStyle}">Quantity:</Label>
+            <TextBox x:Name="txtQuantity" Text="{Binding Ingredient.Quantity, UpdateSourceTrigger=PropertyChanged}"
+                     TextChanged="TextBox_TextChanged" Style="{StaticResource TextBoxStyle}" />
+
+            <Label Style="{StaticResource TitleLabelStyle}">Unit:</Label>
+            <TextBox x:Name="txtUnit" Text="{Binding Ingredient.Unit, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TextBoxStyle}" />
+
+            <Label Style="{StaticResource TitleLabelStyle}">Calories:</Label>
+            <TextBox Text="{Binding Ingredient.Calories, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TextBoxStyle}" />
+
+            <Label Style="{StaticResource TitleLabelStyle}">Food Group:</Label>
+            <TextBox Text="{Binding Ingredient.FoodGroup, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TextBoxStyle}" />
+
+            <Label Style="{StaticResource TitleLabelStyle}">Steps:</Label>
+
+            <ListBox x:Name="stepListBox" ItemsSource="{Binding steps}" DisplayMemberPath="Description"
+                     Style="{StaticResource ListBoxStyle}" />
+
+            <Button Content="Add Step" Click="AddStep_Click" Style="{StaticResource ButtonStyle}" />
+            <Button Content="Delete Step" Click="DeleteStep_Click" Style="{StaticResource ButtonStyle}" />
+
+            <Button Content="Save" Click="Save_Click" Style="{StaticResource ButtonStyle}" />
+            <Button Content="Cancel" Click="Cancel_Click" Style="{StaticResource ButtonStyle}" RenderTransformOrigin="0.504,2.103" />
+        </StackPanel>
+    </Grid>
+</Window>

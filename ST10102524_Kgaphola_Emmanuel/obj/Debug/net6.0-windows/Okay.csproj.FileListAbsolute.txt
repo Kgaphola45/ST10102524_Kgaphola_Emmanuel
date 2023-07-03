@@ -1,0 +1,52 @@
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.csproj.AssemblyReference.cache
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\IngredientWindow.baml
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\IngredientWindow.g.cs
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay_MarkupCompile.cache
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay_MarkupCompile.lref
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\bin\Debug\net6.0-windows\Okay.exe
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\bin\Debug\net6.0-windows\Okay.deps.json
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\bin\Debug\net6.0-windows\Okay.runtimeconfig.json
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\bin\Debug\net6.0-windows\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\bin\Debug\net6.0-windows\Okay.pdb
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\ScaleRecipeWindow.baml
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\ScaleRecipeWindow.g.cs
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.g.resources
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.AssemblyInfoInputs.cache
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.AssemblyInfo.cs
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.csproj.CoreCompileInputs.cache
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\refint\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.pdb
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\Okay.genruntimeconfig.cache
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\ref\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\New folder\Okay\Okay\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.csproj.AssemblyReference.cache
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\IngredientWindow.baml
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\ScaleRecipeWindow.baml
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\IngredientWindow.g.cs
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\ScaleRecipeWindow.g.cs
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay_MarkupCompile.cache
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay_MarkupCompile.lref
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\refint\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.pdb
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\bin\Debug\net6.0-windows\Okay.exe
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\bin\Debug\net6.0-windows\Okay.deps.json
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\bin\Debug\net6.0-windows\Okay.runtimeconfig.json
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\bin\Debug\net6.0-windows\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\bin\Debug\net6.0-windows\Okay.pdb
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.g.resources
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.AssemblyInfoInputs.cache
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.AssemblyInfo.cs
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.csproj.CoreCompileInputs.cache
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\Okay.genruntimeconfig.cache
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\ref\Okay.dll
+C:\Users\Proit\OneDrive\Desktop\Okay\Okay\obj\Debug\net6.0-windows\App.baml
