@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Proit\\OneDrive\\Desktop\\Okay\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj": {}
+    "C:\\Users\\Proit\\Source\\Repos\\Kgaphola45\\ST10102524_Kgaphola_Emmanuel\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Proit\\OneDrive\\Desktop\\Okay\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj": {
+    "C:\\Users\\Proit\\Source\\Repos\\Kgaphola45\\ST10102524_Kgaphola_Emmanuel\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Proit\\OneDrive\\Desktop\\Okay\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj",
+        "projectUniqueName": "C:\\Users\\Proit\\Source\\Repos\\Kgaphola45\\ST10102524_Kgaphola_Emmanuel\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj",
         "projectName": "ST10102524_Kgaphola_Emmanuel",
-        "projectPath": "C:\\Users\\Proit\\OneDrive\\Desktop\\Okay\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj",
+        "projectPath": "C:\\Users\\Proit\\Source\\Repos\\Kgaphola45\\ST10102524_Kgaphola_Emmanuel\\Okay\\ST10102524_Kgaphola_Emmanuel.csproj",
         "packagesPath": "C:\\Users\\Proit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Proit\\OneDrive\\Desktop\\Okay\\Okay\\obj\\",
+        "outputPath": "C:\\Users\\Proit\\Source\\Repos\\Kgaphola45\\ST10102524_Kgaphola_Emmanuel\\Okay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Proit\\AppData\\Roaming\\NuGet\\NuGet.Config",

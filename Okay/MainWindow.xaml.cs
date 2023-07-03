@@ -17,7 +17,8 @@ namespace RecipeManagementApp
 
     public MainWindow()
 {
-    InitializeComponent();
+            // Initialize the RecipeManagement instance and set the CurrentRecipe to a new instance of Recipe
+            InitializeComponent();
     recipeManagement = new RecipeManagement();
     recipeManagement.CurrentRecipe = new Recipe(); // Add this line
    
@@ -25,7 +26,7 @@ namespace RecipeManagementApp
 
 
 
-
+        // Event handler for the "Reset All Recipes" button click
         private void ResetAllRecipes_Click(object sender, RoutedEventArgs e)
         {
             recipeManagement.Recipes.Clear(); // Clear the Recipes collection
@@ -33,16 +34,18 @@ namespace RecipeManagementApp
             lstRecipes.ItemsSource = recipeManagement.GetRecipeList();
         }
 
-
+        // Event handler for the "Add Ingredient" button click
         private void AddIngredient_Click(object sender, RoutedEventArgs e)
         {
             var ingredientWindow = new IngredientWindow();
             ingredientWindow.Owner = this;
+            // Open the IngredientWindow and add the new ingredient to the CurrentRecipe if the dialog result is true
             if (ingredientWindow.ShowDialog() == true)
+                if (ingredientWindow.ShowDialog() == true)
             {
                 var ingredient = ingredientWindow.Ingredient;
-
-                if (recipeManagement.CurrentRecipe == null)
+                    // Check if the CurrentRecipe is null and create a new Recipe if it is
+                    if (recipeManagement.CurrentRecipe == null)
                     recipeManagement.CurrentRecipe = new Recipe(); 
 
                 if (recipeManagement.CurrentRecipe.Ingredients == null)
@@ -53,9 +56,10 @@ namespace RecipeManagementApp
                 lstIngredients.ItemsSource = recipeManagement.CurrentRecipe.Ingredients;
             }
         }
-
+        // Event handler for the "Add Recipe" button click
         private void AddRecipe_Click(object sender, RoutedEventArgs e)
         {
+            // Check if the recipe name is empty or whitespace and display an error message if it is
             if (string.IsNullOrWhiteSpace(txtRecipeName.Text))
             {
                 MessageBox.Show("Please enter a recipe name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -79,7 +83,7 @@ namespace RecipeManagementApp
             lstRecipes.ItemsSource = recipeManagement.GetRecipeList();
             ClearForm();
         }
-
+        // Event handler for the "Filter By Max Calories" button click
         private void FilterByMaxCalories_Click(object sender, RoutedEventArgs e)
         {
             if (int.TryParse(txtMaxCalories.Text, out int maxCalories))
@@ -92,14 +96,15 @@ namespace RecipeManagementApp
                 MessageBox.Show("Invalid maximum calories. Please enter a numeric value.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        // Event handler for the "Search" button click
         private void Search_Click(object sender, RoutedEventArgs e)
         {
+            // Get the keyword, food group, and maximum calories from the input fields
             var keyword = txtSearch.Text.ToLower();
             var foodGroup = cmbFoodGroup.SelectedItem as string;
             double maxCalories;
             double.TryParse(txtMaxCalories.Text, out maxCalories);
-
+            // Retrieve the filtered recipes based on the search criteria and update the UI
             var filteredRecipes = recipeManagement.GetRecipeList().Where(r =>
                 r.RecipeName.ToLower().Contains(keyword) ||
                 r.Ingredients.Any(i => i.Name.ToLower().Contains(keyword))
@@ -118,15 +123,17 @@ namespace RecipeManagementApp
             lstRecipes.ItemsSource = filteredRecipes;
         }
 
-
+        // Event handler for the "Clear" button click
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
+            // Clear the input form and retrieve the updated recipe list
             ClearForm();
             lstRecipes.ItemsSource = null;
             lstRecipes.ItemsSource = recipeManagement.GetRecipeList();
         }
+        // Event handler for the "Scale Recipe" button click
 
-       private void ScaleRecipe_Click(object sender, RoutedEventArgs e)
+        private void ScaleRecipe_Click(object sender, RoutedEventArgs e)
 {
     // Check if there is a current recipe selected
     if (recipeManagement.CurrentRecipe == null)
@@ -167,9 +174,9 @@ namespace RecipeManagementApp
         }
 
 
-       
 
 
+        // Event handler for the "Display Recipe" button click
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
 {
     if (lstRecipes.SelectedItem != null)
@@ -195,8 +202,8 @@ namespace RecipeManagementApp
                              $"Calories: {ingredient.Calories}\n" +
                              $"Food Group: {ingredient.FoodGroup}\n" +
                              "Steps:\n";
-
-            foreach (var step in ingredient.Steps)
+                    // Build a string representation of the recipe details
+                    foreach (var step in ingredient.Steps)
             {
                 recipeDetails += $"{step}\n";
             }
@@ -264,7 +271,7 @@ namespace RecipeManagementApp
     {
         public string Description { get; set; }
     }
-
+    // Class representing an ingredient
     public class Ingredient
     {
         public string Name { get; set; }
@@ -278,6 +285,8 @@ namespace RecipeManagementApp
 
 
     }
+
+    // Class responsible for managing recipes
 
     public class RecipeManagement
     {
