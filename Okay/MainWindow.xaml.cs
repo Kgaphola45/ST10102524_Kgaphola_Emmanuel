@@ -162,8 +162,32 @@ namespace RecipeManagementApp
 
         private void ResetQuantities_Click(object sender, RoutedEventArgs e)
         {
+            // Check if there is a current recipe selected
+            if (recipeManagement.CurrentRecipe == null)
+            {
+                MessageBox.Show("Please select a recipe first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
+            // Check if there are any ingredients in the current recipe
+            if (recipeManagement.CurrentRecipe.Ingredients == null || recipeManagement.CurrentRecipe.Ingredients.Count == 0)
+            {
+                MessageBox.Show("There are no ingredients to reset.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
+            // Reset the quantities of each ingredient in the current recipe to their original values
+            foreach (var ingredient in recipeManagement.CurrentRecipe.Ingredients)
+            {
+                var originalIngredient = recipeManagement.GetOriginalRecipe()?.Ingredients.FirstOrDefault(i => i.Name == ingredient.Name);
+                if (originalIngredient != null)
+                {
+                    ingredient.Quantity = originalIngredient.Quantity;
+                }
+            }
+
+            // Show a notification to the user
+            MessageBox.Show("The quantities have been reset.", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
 
