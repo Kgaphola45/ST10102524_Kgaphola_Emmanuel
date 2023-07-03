@@ -1,4 +1,5 @@
 ﻿// Define the namespace for the project
+//new line
 using ST10102524_Kgaphola_Emmanuel;
 
 namespace ST10102524_Kgaphola_Emmanuel_PROG6221_Part1
