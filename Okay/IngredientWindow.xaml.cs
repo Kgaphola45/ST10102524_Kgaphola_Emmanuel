@@ -91,7 +91,7 @@ namespace RecipeManagementApp
     }
 
 
-
+    // Validation rule for step description
     public class StepDescriptionValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
