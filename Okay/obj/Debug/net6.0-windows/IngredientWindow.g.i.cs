@@ -84,7 +84,7 @@ namespace RecipeManagementApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ST10102524_Kgaphola_Emmanuel;V1.0.0.0;component/ingredientwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ST10102524_Kgaphola_Emmanuel;component/ingredientwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\IngredientWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
