@@ -2,8 +2,7 @@
 
 This is a Recipe Management App that allows you to create, store, and manage recipes. The app has been updated from a console application to a graphical user interface (GUI) for a more user-friendly experience. With the GUI, you can easily add ingredients, create recipes, filter recipes based on criteria, and perform various operations on recipes.
 
-## brief description (100 to 200 words) of what you changed based on your lecturer’s 
-feedback.
+
 
 
 
